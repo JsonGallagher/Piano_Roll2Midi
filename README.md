@@ -105,5 +105,5 @@ Make sure your virtual environment is activated, then run the script from the co
 Example:
 
 ```bash
-python app.py test_image.png output_pattern.mid
+python app.py images/test_image.png output_pattern.mid
 ```
