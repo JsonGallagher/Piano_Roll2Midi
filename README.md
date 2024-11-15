@@ -30,19 +30,45 @@ Convert DAW piano roll screenshots into MIDI files using AI-powered image recogn
    cd piano-roll-interpreter
    ```
 
-2. Install dependencies:
+2. Set up a virtual environment:
+
+   **macOS/Linux:**
+   ```bash
+   # Create virtual environment
+   python3 -m venv venv
+
+   # Activate virtual environment
+   source venv/bin/activate   # For bash/zsh
+   source venv/bin/activate.fish   # For fish
+   ```
+
+   **Windows:**
+   ```bash
+   # Create virtual environment
+   python -m venv venv
+
+   # Activate virtual environment
+   .\venv\Scripts\activate
+   ```
+
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Create a `.env` file in the project root and add your OpenAI API key:
+4. Create a `.env` file in the project root and add your OpenAI API key:
    ```
    OPENAI_API_KEY=your_api_key_here
    ```
 
+5. When you're done working on the project, deactivate the virtual environment:
+   ```bash
+   deactivate
+   ```
+
 ## Usage
 
-Run the script from the command line with two arguments:
+Make sure your virtual environment is activated, then run the script from the command line with two arguments:
 1. Path to the input screenshot
 2. Desired output MIDI file path
 
@@ -91,6 +117,13 @@ piano-roll-interpreter/
 ├── .env                      # Environment variables
 └── README.md                 # Documentation
 ```
+
+## Troubleshooting
+
+Common issues:
+- If you get a "command not found" error, make sure your virtual environment is activated
+- If you see import errors, verify that all dependencies were installed while the virtual environment was activated
+- For permission issues on macOS/Linux when creating the virtual environment, try using `sudo python3 -m venv venv`
 
 ## Limitations
 
