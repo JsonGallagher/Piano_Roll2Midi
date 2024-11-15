@@ -2,6 +2,8 @@
 
 Convert DAW piano roll screenshots into MIDI files using AI-powered image recognition. This tool analyzes screenshots of piano roll patterns from digital audio workstations and automatically generates corresponding MIDI files, making it easy to transfer musical ideas between different DAWs or share patterns with other musicians.
 
+*NOTE* - This is a work in progress. Currently having trouble translating the image recognition data to the precise data needed to output a 100% accurate MIDI file. Need to rethink how to approach...
+
 ## Features
 
 - Automated recognition of piano roll notes from screenshots
@@ -91,4 +93,4 @@ Make sure your virtual environment is activated, then run the script from the co
 2. Desired output MIDI file path
 
 ```bash
-python piano_roll_interpreter.py input_screenshot.png output_pattern.mid
+python app.py test_image.png output_pattern.mid
