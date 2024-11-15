@@ -10,6 +10,24 @@ Convert DAW piano roll screenshots into MIDI files using AI-powered image recogn
 - Support for complex musical patterns
 - Detailed logging for troubleshooting
 
+## Example Screenshot
+
+![Example Piano Roll Screenshot](docs/example_screenshot.png)
+
+A good screenshot should include:
+1. ✅ Clear beat markers at the top
+2. ✅ Visible piano roll grid
+3. ✅ Distinct note blocks
+4. ✅ Full pattern visible
+5. ✅ Clean view without extra UI elements
+
+❌ Avoid:
+- Overlapping or cut-off notes
+- Missing beat markers
+- Blurry or low-resolution images
+- Dark themes that make note boundaries unclear
+- Screenshots with additional DAW controls or windows
+
 ## Prerequisites
 
 - Python 3.8+
@@ -74,73 +92,3 @@ Make sure your virtual environment is activated, then run the script from the co
 
 ```bash
 python piano_roll_interpreter.py input_screenshot.png output_pattern.mid
-```
-
-### Example:
-```bash
-python piano_roll_interpreter.py "./screenshots/pattern1.png" "./midi/pattern1.mid"
-```
-
-## How It Works
-
-1. **Image Processing**: The tool takes a screenshot of your DAW's piano roll as input.
-2. **AI Analysis**: Using GPT-4V, it analyzes the image to detect:
-   - Note positions (MIDI note numbers)
-   - Start times (in beats)
-   - Note durations
-   - Velocity values
-3. **MIDI Generation**: The detected notes are converted into a MIDI file that preserves all musical information.
-
-## Best Practices for Screenshots
-
-For optimal results:
-- Ensure the piano roll grid is clearly visible
-- Include the beat markers at the top of the piano roll
-- Make sure note blocks are distinct and not overlapping
-- Capture the entire pattern you want to convert
-- Use a clean view without unnecessary UI elements
-
-## Error Handling
-
-The script includes comprehensive error handling and logging:
-- Validates input files exist and are valid images
-- Checks API key availability
-- Verifies JSON response structure
-- Provides detailed error messages for troubleshooting
-
-## Project Structure
-
-```
-piano-roll-interpreter/
-├── piano_roll_interpreter.py   # Main script
-├── requirements.txt           # Python dependencies
-├── .env                      # Environment variables
-└── README.md                 # Documentation
-```
-
-## Troubleshooting
-
-Common issues:
-- If you get a "command not found" error, make sure your virtual environment is activated
-- If you see import errors, verify that all dependencies were installed while the virtual environment was activated
-- For permission issues on macOS/Linux when creating the virtual environment, try using `sudo python3 -m venv venv`
-
-## Limitations
-
-- Currently optimized for Ableton Live piano roll screenshots
-- Requires clear, high-quality screenshots
-- API key with GPT-4V access is required
-- Processing time depends on image complexity and API response time
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Uses OpenAI's GPT-4V for image analysis
-- Built with Python's `midiutil` library for MIDI file creation
