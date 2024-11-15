@@ -17,6 +17,7 @@ Convert DAW piano roll screenshots into MIDI files using AI-powered image recogn
 ![Example Piano Roll Screenshot](docs/example_screenshot.png)
 
 A good screenshot should include:
+
 1. ✅ Clear beat markers at the top
 2. ✅ Visible piano roll grid
 3. ✅ Distinct note blocks
@@ -24,6 +25,7 @@ A good screenshot should include:
 5. ✅ Clean view without extra UI elements
 
 ❌ Avoid:
+
 - Overlapping or cut-off notes
 - Missing beat markers
 - Blurry or low-resolution images
@@ -35,7 +37,8 @@ A good screenshot should include:
 - Python 3.8+
 - OpenAI API key (GPT-4V access required)
 - Required Python packages:
-  ```
+
+  ```bash
   openai
   python-dotenv
   Pillow
@@ -45,6 +48,7 @@ A good screenshot should include:
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/piano-roll-interpreter.git
    cd piano-roll-interpreter
@@ -53,6 +57,7 @@ A good screenshot should include:
 2. Set up a virtual environment:
 
    **macOS/Linux:**
+
    ```bash
    # Create virtual environment
    python3 -m venv venv
@@ -63,6 +68,7 @@ A good screenshot should include:
    ```
 
    **Windows:**
+
    ```bash
    # Create virtual environment
    python -m venv venv
@@ -72,16 +78,19 @@ A good screenshot should include:
    ```
 
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Create a `.env` file in the project root and add your OpenAI API key:
-   ```
+
+   ```bash
    OPENAI_API_KEY=your_api_key_here
    ```
 
 5. When you're done working on the project, deactivate the virtual environment:
+
    ```bash
    deactivate
    ```
@@ -89,8 +98,12 @@ A good screenshot should include:
 ## Usage
 
 Make sure your virtual environment is activated, then run the script from the command line with two arguments:
-1. Path to the input screenshot
-2. Desired output MIDI file path
+
+1. Path to input screenshot
+2. Desired output MIDI file name/path
+
+Example:
 
 ```bash
 python app.py test_image.png output_pattern.mid
+```
